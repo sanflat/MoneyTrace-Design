@@ -5,7 +5,6 @@
 | id           | long       | NO   | PRI   |         |
 | setting_id  | int        | NO   |       |         |
 | amount       | int        | NO   |       |         |
-| deleted_at   | timestamp  | YES  |       |         |
 | created_date | timestamp  | NO   |       |         |
 | updated_date | timestamp  | YES  |       |         | 
 
@@ -16,7 +15,6 @@
 | id           | long       | NO   | PRI   |         |
 | setting_id   | int        | NO   |       |         |
 | amount       | int        | NO   |       |         |
-| deleted_at   | timestamp  | YES  |       |         |
 | created_date | timestamp  | NO   |       |         |
 | updated_date | timestamp  | YES  |       |         | 
 
@@ -28,19 +26,20 @@
 -> 存在するレコード単位でincomeとexpenceテーブルを使って計算する  
 
 **設定**  
-・収入と支出のカテゴリ編集と追加  
-【setting】
+・収入のカテゴリ編集と追加  
+【setting_income】
 | Column             | Type       | Null | Key   | Default | 
 | :-----             | :---       | :--- | :---- | :-----  |
-| id                 | long       | NO   | PRI   |         |
-| type_id            | int        | NO   |       |         |
+| setting_id                 | long       | NO   | PRI   |         |
 | category_name      | string     | NO   |       |         |
-| deleted_at         | timestamp  | YES  |       |         |
 | created_date       | timestamp  | NO   |       |         |
 | updated_date       | timestamp  | YES  |       |         | 
 
-【setting_type】
-| Column         | Type       | Null | Key   | Default | 
-| :-----         | :---       | :--- | :---- | :-----  |
-| id             | long       | NO   | PRI   |         |
-| type_name      | string     | NO   |       |         |
+・支出のカテゴリ編集と追加  
+【setting_expence】
+| Column             | Type       | Null | Key   | Default | 
+| :-----             | :---       | :--- | :---- | :-----  |
+| setting_id                 | long       | NO   | PRI   |         |
+| category_name      | string     | NO   |       |         |
+| created_date       | timestamp  | NO   |       |         |
+| updated_date       | timestamp  | YES  |       |         | 
