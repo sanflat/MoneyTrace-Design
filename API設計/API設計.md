@@ -26,6 +26,7 @@ https://developer.mozilla.org/ja/docs/Web/HTTP/Status
 |:-----------  |:----------- |:-----------------  |:--------------- |:-------------   |
 | GET Balance  | GET         | /api/v1/balance    | 200(OK)         | Get Balance     |
 
+```
 [
     {
         "income": {
@@ -39,12 +40,14 @@ https://developer.mozilla.org/ja/docs/Web/HTTP/Status
         "barance": '¥5000', A - B
     }
 ]
+```
 
 【残高の変動履歴】
 | API Name             | HTTP Method | Path                       | Status Code     | Description         |
 |:-------------------  |:----------- |:------------------------   |:--------------- |:-------------       |
 | GET Balance History  | GET         | /api/v1/balance_history    | 200(OK)         | Get Balance History |
 
+```
 [
     {
         "history":{
@@ -61,6 +64,7 @@ https://developer.mozilla.org/ja/docs/Web/HTTP/Status
         }
     }
 ]
+```
 
 **設定**
 
